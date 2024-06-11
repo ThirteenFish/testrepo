@@ -16,4 +16,10 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-
+      - name: sim
+        run: |
+          ls /sys/kernel
+          ls /sys/kernel/config
+          lsmod
+          modprobe gpio-sim
+          ls /sys/kernel/config
