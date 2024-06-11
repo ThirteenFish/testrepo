@@ -19,7 +19,7 @@ jobs:
       - name: sim
         run: |
           set -x
-          ls /lib/modules/6.5.0-1021-azure
+          ls /lib/modules/6.5.0-1021-azure/kernel/drivers/gpio/
           ls /sys/kernel/config
           lsmod
           sudo modprobe gpio-sim
