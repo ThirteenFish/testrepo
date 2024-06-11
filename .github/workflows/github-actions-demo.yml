@@ -18,8 +18,9 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: sim
         run: |
-          ls /sys/kernel
+          set -x
+          ls /lib/modules/6.5.0-1021-azure
           ls /sys/kernel/config
           lsmod
-          modprobe gpio-sim
+          sudo modprobe gpio-sim
           ls /sys/kernel/config
